@@ -1,20 +1,16 @@
 // Update these values if you want the first row to match your exact details.
 const personalInfo = {
   id: "005110",
-  firstName: "Jemaica",
-  lastName: "Ngujo",
-  username: "jemaica.ngujo",
-  email: "your-email@example.com",
-  zipcode: "7200"
+  firstName: "John Michael",
+  lastName: "Mier",
+  username: "MierTzy",
+  email: "johnmichael.mier@nmsc.edu.ph",
+  zipcode: "7023"
 };
 
 const tableBody = document.getElementById("userTableBody");
 const statusMessage = document.getElementById("statusMessage");
 const reloadButton = document.getElementById("reloadButton");
-
-function formatId(value) {
-  return String(value).padStart(6, "0");
-}
 
 function splitName(fullName) {
   const trimmedName = fullName.trim();
@@ -42,7 +38,7 @@ function normalizeApiUser(user) {
   const { firstName, lastName } = splitName(user.name);
 
   return {
-    id: formatId(user.id),
+    id: user.id,
     firstName,
     lastName,
     username: user.username,
